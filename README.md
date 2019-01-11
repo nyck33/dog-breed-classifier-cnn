@@ -19,7 +19,7 @@
 :point_down:Screenshot:
 
 <p align="center">
-  <img src="https://s18.postimg.cc/l01x6fn3d/demo1.png" width="600px" alt="">
+  <img src="https://github.com/nyck33/dog-breed-classifier-cnn/blob/master/doberman.jpeg?raw=true" width="600px" alt="">
 </p>
 
 ------------------

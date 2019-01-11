@@ -22,7 +22,7 @@ from keras.callbacks import ModelCheckpoint
 
 from keras.callbacks import ModelCheckpoint
 
-from extract_bottleneck_features import * 
+#from extract_bottleneck_features import * 
 
 import numpy as np
 
@@ -33,6 +33,13 @@ from keras.layers import GlobalAveragePooling2D
 from keras.callbacks import ModelCheckpoint   
 
 from extract_bottleneck_features import *
+
+###########################################################
+#probably don't need this as the h5 model already used Resnet
+from keras.applications.resnet50 import ResNet50
+#define ResNet50 model
+ResNet50_model = ResNet50(weights='imagenet')
+###########################################################
 
 # extract pre-trained face detector
 face_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_alt.xml')
@@ -72,12 +79,3 @@ def ResNet50_predict_labels(img_path):
 #corresponding to model's predicted object class, ie. predicted probability vector is 133 indexes?
 #ie. should return a value btwn 151 and 268 inclusive if it's a dog but that's only 117
 
-# model._make_predict_function()          # Necessary, ie. must be in the model code
-def dog_breed_finder(img_path): #replaces model_predict
-    bottleneck_Resnet = extract_Resnet50(path_to_tensor(img_path)) #helper function processes input
-    
-    predicted_vector = model.predict(bottleneck_Resnet) #dog_breed_finder does the work
-    #print(predicted_vector)
-    #print(dog_names[np.argmax(predicted_vector)])
-    
-    return dog_names[np.argmax(predicted_vector)]#returns dog name matching argmax index of 

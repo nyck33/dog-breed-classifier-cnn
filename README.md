@@ -29,7 +29,7 @@
 Build the image
 
 ```shell
-cd keras-flask-deploy-webapp
+cd dog-breed-classifier-cnn
 docker build -t keras_flask .
 docker run -e MODEL_PATH=models/your_model.h5 -p 5000:5000
 ```
@@ -45,7 +45,7 @@ docker run -e MODEL_PATH=/mnt/models/your_model.h5  -v volume-name:/mnt/models -
 
 ### Clone the repo
 ```shell
-$ git clone https://github.com/mtobeiyf/keras-flask-deploy-webapp.git
+$ git clone https://github.com/nyck33/dog-breed-classifier-cnn.git
 ```
 
 ### Install requirements
@@ -86,14 +86,14 @@ Open http://localhost:5000 and have fun. :smiley:
 
 Place your trained `.h5` file saved by `model.save()` under models directory.
 
-Check the [commented code](https://github.com/mtobeiyf/keras-flask-deploy-webapp/blob/master/app.py#L25) in app.py.
+Check the [commented code](https://github.com/nyck33/dog-breed-classifier-cnn.git/app.py#L25) in app.py.
 
 
 ### Use other pre-trained model
 
 See [Keras applications](https://keras.io/applications/) for more available models such as DenseNet, MobilNet, NASNet, etc.
 
-Check [this section](https://github.com/mtobeiyf/keras-flask-deploy-webapp/blob/master/app.py#L25) in app.py.
+Check [this section](https://github.com/nyck33/dog-breed-classifier-cnn.git/blob/master/app.py#L25) in app.py.
 
 ### UI Modification
 

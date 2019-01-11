@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/python-2.7%2C%203.5%2B-green.svg)]()
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
-> A pretty and customizable web app to deploy your DL model with ease
+> It is now a dog breed classifier using ResNet50 Transfer Learning
 
 ------------------
 
